@@ -46,27 +46,26 @@ if (isset($sc)) {
 $get_alias = $heyuvar . 'show alias';
 $devices = explode(":", preg_replace('/( )+/', ' ', str_replace("alias", ":", str_replace("[Aliases]", "", shell_exec($get_alias)))) . ":");
 if (!empty($devices)) {
-$count = 0;
-foreach ($devices as &$device) {
-$count++;
-list($dev_name, $dev_address, $dev_type) = explode(":", str_replace(" ", ":", trim($device)));
-$get_level = $heyuvar . 'dimlevel ' . $dev_address;
-if ($dev_address) {
-$dev_level = trim(shell_exec($get_level));
-if (($dev_type != "StdLM") && ($dev_level > 0)) $dev_level = 100;
+        $count = 0;
+        foreach ($devices as &$device) {
+                $count++;
+                list($dev_name, $dev_address, $dev_type) = explode(":", str_replace(" ", ":", trim($device)));
+                $get_level = $heyuvar . 'dimlevel ' . $dev_address;
+                if ($dev_address) {
+                        $dev_level = trim(shell_exec($get_level));
+                        if (($dev_type != "StdLM") && ($dev_level > 0)) $dev_level = 100;
 ?>
-
                                         <form class="form-inline" id="form<?php echo $dev_address; ?>" method="post" action="">
                                         <input type="hidden" name="hu" value="<?php echo $dev_address; ?>" />
                                         <button type="submit" class="btn btn-sm1 btn-success" name="action" value="on">On</button>
                                         <button type="submit" class="btn btn-sm1 btn-danger" name="action" value="off">Off</button>
 <?php
-if ($dev_type == "StdLM") { 
-        for ($x = 30; $x < 100; $x+=10) { ?>
+                        if ($dev_type == "StdLM") { 
+                                for ($x = 30; $x < 100; $x+=10) { ?>
                                         <button type="submit" class="btn btn-sm1 btn-default" name="action" value="<?php echo $x; ?>"><?php echo $x; ?></button>
 <?php
-        }
-}
+                                }
+                        }
 ?>
                                         </form>
                                         </form>
@@ -81,8 +80,8 @@ if ($dev_type == "StdLM") {
                                                 </div>
                                         </div>
 <?php
-}
-if($count == ceil(count($devices)/2)) {
+                }
+                if($count == ceil(count($devices)/2)) {
 ?>
 </div>
                         </div>
@@ -92,8 +91,8 @@ if($count == ceil(count($devices)/2)) {
                                 <div class="panel-heading">Devices</div>
                                 <div class="panel-body">
 <?php
-}
-}
+                }
+        }
 }
 ?>
 </div>
@@ -111,10 +110,10 @@ if (!empty($scenes)) {
                                                         <select class="form-control" name="sc">
                                                                 <option value="">Select Scene</option>
 <?php
-foreach ($scenes as &$scene) {
-list($sc_name, $sc_action, $sc_group, $sc_action2, $sc_dim, $sc_dim2) = explode(":", str_replace(" ", ":", trim($scene)));
-if ($sc_name) echo "<option value=\"$sc_name\">" . ucwords(str_replace("_", " ", $sc_name)) . "</option>";
-}
+        foreach ($scenes as &$scene) {
+                list($sc_name, $sc_action, $sc_group, $sc_action2, $sc_dim, $sc_dim2) = explode(":", str_replace(" ", ":", trim($scene)));
+                if ($sc_name) echo "<option value=\"$sc_name\">" . ucwords(str_replace("_", " ", $sc_name)) . "</option>";
+        }
 ?>
                                                         </select>
                                                 </div>
