@@ -69,7 +69,7 @@ if (!empty($devices)) {
 ?>
                                         </form>
                                         <div style="margin-top:4px">
-                                                <div class="col-xs-3 label label-info"><?php echo ucwords(str_replace("_", " ", $dev_name)). ": " . $dev_level . "%"; ?></div>
+                                                <div class="col-xs-3 label label-info"><?php echo ucwords(str_replace("_", " ", $dev_name)); ?></div>
                                                 <div class="col-xs-9">
                                                         <div class="progress">
                                                                 <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<?php echo $dev_level; ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $dev_level; ?>%">
