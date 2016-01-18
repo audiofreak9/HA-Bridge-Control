@@ -68,7 +68,6 @@ if (!empty($devices)) {
                         }
 ?>
                                         </form>
-                                        </form>
                                         <div style="margin-top:4px">
                                                 <div class="col-xs-3 label label-info"><?php echo ucwords(str_replace("_", " ", $dev_name)); ?></div>
                                                 <div class="col-xs-9">
