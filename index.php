@@ -95,25 +95,28 @@ if($count == ceil(count($devices)/2)) {
 }
 ?>
                                 </div>
-                                <div class="panel-heading">Scenes</div>
-                                <div class="panel-body">
 <?php
 $get_scenes = $heyuvar . 'show scene';
 $scenes = explode(":", preg_replace('/( )+/', ' ', str_replace("scene", ":", str_replace("[Scenes]", "", shell_exec($get_scenes)))) . ":");
-if (!empty($scenes)) {
+if ((!empty($scenes)) && (trim($scenes[0]) != "-none-")) {
 ?>
+                                <div class="panel-heading">Scenes</div>
+                                <div class="panel-body">
                                         <form class="myform" method="post" action="">
                                         <div class="span4">
                                                 <select class="form-control" name="sc">
                                                         <option value="">Select Scene</option>
 <?php
-foreach ($scenes as &$scene) {
-list($sc_name, $sc_action, $sc_group, $sc_action2, $sc_dim, $sc_dim2) = explode(":", str_replace(" ", ":", trim($scene)));
-if ($sc_name) echo "<option value=\"$sc_name\">" . ucwords(str_replace("_", " ", $sc_name)) . "</option>";
-}
+        foreach ($scenes as &$scene) {
+                list($sc_name, $sc_action, $sc_group, $sc_action2, $sc_dim, $sc_dim2) = explode(":", str_replace(" ", ":", trim($scene)));
+                if ($sc_name) echo "<option value=\"$sc_name\">" . ucwords(str_replace("_", " ", $sc_name)) . "</option>";
+        }
 ?>
                                                 </select>
                                         </div>
+                                        <input type="submit" value="Submit" class="btn btn-sm1 btn-default" /> 
+                                        </form>
+                                 </div>
 <?php
 }
 ?>
