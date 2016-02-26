@@ -55,7 +55,7 @@ if ($dev_address) {
 $dev_level = trim(shell_exec($get_level));
 if (($dev_type != "StdLM") && ($dev_level > 0)) $dev_level = 100;
 ?>
-                                        <form class="form-inline" id="form<?php echo $dev_address; ?>" method="post" action="">
+                                        <form class="form-inline" id="form<?php echo $dev_address; ?>" method="post">
                                         <input type="hidden" name="hu" value="<?php echo $dev_address; ?>" />
                                         <button type="submit" class="btn btn-sm1 btn-success" name="action" value="on">On</button>
                                         <button type="submit" class="btn btn-sm1 btn-danger" name="action" value="off">Off</button>
