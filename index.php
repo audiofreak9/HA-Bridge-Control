@@ -72,7 +72,7 @@ if ($dev_type == "StdLM") {
                                                 <div class="col-xs-3 label label-info"><?php echo ucwords(str_replace("_", " ", $dev_name)); ?></div>
                                                 <div class="col-xs-9">
                                                         <div class="progress">
-                                                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<?php echo $dev_level; ?>" aria-valuemin="0" aria-valuemax="100" style="wid$
+                                                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<?php echo $dev_level; ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $dev_level; ?>%">
                                                                         <?php echo ' ' . $dev_level . '% '; ?>
                                                                 </div>
                                                         </div>
