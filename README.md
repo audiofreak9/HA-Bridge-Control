@@ -13,12 +13,8 @@ Save the code as index.php on the Apache server in the /var/www/html/ folder. It
   <li>PHP installed</li>
 </ul>
 
-You’ll need to get some CSS and image files for this to look nice and work properly.  Save the extra CSS and image files by doing the following.
+To install in an empty directory: 
 
-$ sudo wget http://www.camwebwp.com/x10_files/bootstrap-theme.min.css
+$ cd /var/www/html/
 
-$ sudo wget http://www.camwebwp.com/x10_files/bootstrap-responsive.css
-
-$ sudo wget http://www.camwebwp.com/x10_files/startup.png
-
-$ sudo wget http://www.camwebwp.com/x10_files/x10switch_icon.png
+$ sudo git clone https://github.com/audiofreak9/PHP-X10-Control .
