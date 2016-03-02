@@ -28,12 +28,12 @@ if (isset($sc)) {
 <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-<link href="startup.png" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
-<link rel="apple-touch-icon" href="x10switch_icon.png"/>
+<link href="images/startup.png" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+<link rel="apple-touch-icon" href="images/x10switch_icon.png"/>
 <title>X10 Lighting</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-<link rel="stylesheet" href="bootstrap-responsive.css">
-<link rel="stylesheet" href="bootstrap-theme.min.css">
+<link rel="stylesheet" href="css/bootstrap-responsive.css">
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
 </head>
 <body>
 <div class="container container-fluid" role="main">
