@@ -1,4 +1,4 @@
-# HA-Bridge-Control
+# PHP-X10-Control
 Phone, Tablet &amp; Desktop PHP X10 control
 
 Code written in PHP that allows control X10 devices with a phone, tablet or desktop.  
@@ -17,4 +17,4 @@ To install in an empty directory:
 
 $ cd /var/www/html/
 
-$ sudo git clone https://github.com/audiofreak9/HA-Bridge-Control .
+$ sudo git clone https://github.com/audiofreak9/PHP-X10-Control .
