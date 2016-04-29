@@ -1,4 +1,4 @@
-# PHP-X10-Control
+# HA-Bridge-Control
 Phone, Tablet &amp; Desktop PHP X10 control
 
 Code written in PHP that allows control X10 devices with a phone, tablet or desktop.  
