@@ -18,3 +18,5 @@ To install in an empty directory:
 $ cd /var/www/html/
 
 $ sudo git clone https://github.com/audiofreak9/PHP-X10-Control .
+
+Refer to my blog post for Installation details: <a href="http://coreyswrite.com/tips-tricks/phone-tablet-desktop-php-x10-control/">http://coreyswrite.com/tips-tricks/phone-tablet-desktop-php-x10-control/</a>
